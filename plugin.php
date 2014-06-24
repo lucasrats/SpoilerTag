@@ -14,8 +14,8 @@ if (!defined("IN_ESOTALK")) exit;
 class ETPlugin_SpoilerTag extends ETPlugin {
 
 	public function handler_conversationController_renderBefore($sender){
-			$sender->addCSSFile($this->getResource("spoiler.css"));
-			$sender->addJSFile($this->getResource("spoiler.js"));
+			$sender->addCSSFile($this->resource("spoiler.css"));
+			$sender->addJSFile($this->resource("spoiler.js"));
 	}
 	
 	public function handler_memberController_renderBefore($sender){

@@ -29,3 +29,6 @@ margin:5px;
 .spoiler + div.content *:hover { } 
 .nsfw + div.content *:hover { } 
 
+.icon-spoiler:before {
+  content: "\f071";
+}

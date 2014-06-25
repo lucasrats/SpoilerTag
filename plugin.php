@@ -45,7 +45,7 @@ class ETPlugin_SpoilerTag extends ETPlugin {
 	 */
 	public function handler_conversationController_getEditControls($sender, &$controls, $id)
 	{
-		addToArrayString($controls, "spoiler", "<a href='javascript:SpoilerTag.spoiler(\"$id\");void(0)' title='".T("SpoilerBBCode")."' class='spoiler span'><i class='icon-spoiler'></i></a>", 0);
+		addToArrayString($controls, "spoiler", "<a href='javascript:SpoilerTag.spoiler(\"$id\");void(0)' title='".T("SpoilerBBCode")."' class='control-spoiler'><i class='icon-spoiler'></i></a>", 0);
 	
 	}
 }

@@ -37,6 +37,17 @@ class ETPlugin_SpoilerTag extends ETPlugin {
 				"$1</p><div class=\"nsfw\"><span>".T("NSFW")."</span> <span class=\"title\">$2$3</span><div class=\"content\">$4</div></div><p>", $sender->content);
 		}
 	}
+	
+	/**
+	 * Add an event handler to the "getEditControls" method of the conversation controller to add Spoiler bbcode
+	 *
+	 * @return void
+	 */
+	public function handler_conversationController_getEditControls($sender, &$controls, $id)
+	{
+		addToArrayString($controls, "spoiler", "<a href='javascript:SpoilerTag.spoiler(\"$id\");void(0)' title='".T("SpoilerBBCode")."' class='spoiler span'><i class='icon-spoiler'></i></a>", 0);
+	
+	}
 }
 
 ?>
